@@ -1,0 +1,275 @@
+//{{NO_DEPENDENCIES}}
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""res\\vpc.rc2""  // App Studio では編集できないリソース\r\n"
+    "\r\n"
+    "#include ""afxres.rc""\011\011\011// リソースの標準的な構成要素\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_MAINFRAME           ICON    DISCARDABLE     "RES\\VPC.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUP_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "1"
+    BEGIN
+        POPUP "File"
+        BEGIN
+            MENUITEM "New...",                      ID_FILE_NEW
+            MENUITEM "Open...",                     ID_FILE_OPEN
+            MENUITEM "Save As...",                  ID_FILE_SAVEAS
+            MENUITEM "Clear",                       ID_FILE_CLEAR
+            MENUITEM "Copy",                        ID_FILE_COPY
+            MENUITEM "Paste",                       ID_FILE_PASTE
+            MENUITEM "Data Out...",                 ID_FILE_DATAOUT
+            MENUITEM SEPARATOR
+            MENUITEM "About...",                    ID_APP_ABOUT
+            MENUITEM "Exit",                        ID_APP_EXIT
+        END
+        POPUP "Convert"
+        BEGIN
+            MENUITEM "Undo",                        ID_CON_UNDO
+            MENUITEM "Cut Down Color",              ID_CON_CDCOLOR
+            MENUITEM "Find Edges",                  ID_CON_EDGES
+            MENUITEM "Binary...",                   ID_CON_BINARY
+            MENUITEM "Be Smart",                    ID_CON_BESMART
+            MENUITEM "Adjust Height...",            ID_CON_ADHEIGHT
+            MENUITEM "Adjust Center",               ID_CON_ADCENTER
+            MENUITEM "Set Scale...",                ID_CON_SSCALE
+            MENUITEM "Adjust Light...",             ID_CON_ADLIGHT
+            MENUITEM "Rotate",                      ID_CON_ROTATE
+            MENUITEM SEPARATOR
+            MENUITEM "Monochrome",                  ID_CON_MONO
+            MENUITEM "Zoom...",                     ID_CON_ZOOM
+            MENUITEM "Cut Noise",                   ID_CON_CNOISE
+            MENUITEM "Soft",                        ID_CON_SOFT
+            MENUITEM "Find Edges2",                 ID_CON_EDGES2
+            MENUITEM "Prewitt",                     ID_CON_PREWITT
+            MENUITEM "Sobel",                       ID_CON_SOBEL
+            MENUITEM "Nega-Posi",                   ID_CON_NEGAP
+            MENUITEM "Mosaic...",                   ID_CON_MOSAIC
+        END
+        POPUP "Draw"
+        BEGIN
+            MENUITEM "Free Line",                   ID_DRAW_FREE
+            MENUITEM "Line",                        ID_DRAW_LINE
+            MENUITEM "Fill Rect",                   ID_DRAW_FRECT
+            MENUITEM "Get Color",                   ID_DRAW_GETC
+            MENUITEM "Select Color",                ID_DRAW_SELECTC
+            MENUITEM "Clip",                        ID_DRAW_CLIP
+            MENUITEM "No Clip",                     ID_DRAW_NOCLIP
+        END
+        POPUP "Window"
+        BEGIN
+            MENUITEM "Just Fit",                    ID_WND_JUST
+            MENUITEM "Maximized",                   ID_WND_MAX
+            MENUITEM "Correct Ratio",               ID_WND_CRATIO
+        END
+    END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY,CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY,CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY,CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY,CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY,CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 217, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "VPC のバージョン情報"
+FONT 10, "System"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,18,20
+    CTEXT           "VPC Application Version 0.8",IDC_STATIC,40,25,122,8
+    CTEXT           "Copyright (C) 1995",IDC_STATIC,40,40,125,8
+    DEFPUSHBUTTON   "OK",IDOK,176,6,32,14,WS_GROUP
+    CTEXT           "Taisuke Fukuno presents",IDC_STATIC,40,10,125,8
+END
+
+IDD_VALUE_DLG DIALOG DISCARDABLE  0, 0, 135, 40
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 10, "system"
+BEGIN
+    EDITTEXT        IDC_EDIT,5,20,35,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,45,20,40,15
+    PUSHBUTTON      "Cancel",IDCANCEL,90,20,40,15
+    LTEXT           "Static",IDD_VALUE_DLG,6,4,124,11
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Windows アプリケーション VPC\nVpc\nVPC ﾄﾞｷｭﾒﾝﾄ"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Windows アプリケーション VPC"
+    AFX_IDS_IDLEMESSAGE     "ﾚﾃﾞｨ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+    ID_INDICATOR_KANA       "KANA"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "新規にﾌｧｲﾙを作成"
+    ID_FILE_OPEN            "保存されているﾌｧｲﾙを開く"
+    ID_FILE_CLOSE           "作業中のｳｨﾝﾄﾞｳを閉じる"
+    ID_FILE_SAVE            "作業中のﾌｧｲﾙを上書きして保存"
+    ID_FILE_SAVE_AS         "作業中のﾌｧｲﾙを新しい名前で保存"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "ﾌﾟﾛｸﾞﾗﾑ情報､ﾊﾞｰｼﾞｮﾝ､版権の表示"
+    ID_APP_EXIT             "VPC を終了し、文書の保存を確認"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "この文書を開く"
+    ID_FILE_MRU_FILE2       "この文書を開く"
+    ID_FILE_MRU_FILE3       "この文書を開く"
+    ID_FILE_MRU_FILE4       "この文書を開く"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "次のｳｨﾝﾄﾞｳに切り替える"
+    ID_PREV_PANE            "前のｳｨﾝﾄﾞｳに切り替える"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "選択された範囲を削除"
+    ID_EDIT_CLEAR_ALL       "すべてを削除"
+    ID_EDIT_COPY            "選択した範囲をｺﾋﾟｰしてｸﾘｯﾌﾟﾎﾞｰﾄﾞに保存"
+    ID_EDIT_CUT             "選択した範囲を切り取ってｸﾘｯﾌﾟﾎﾞｰﾄﾞに保存"
+    ID_EDIT_FIND            "指定した文字列の検索"
+    ID_EDIT_PASTE           "ｸﾘｯﾌﾟﾎﾞｰﾄﾞの内容をｶｰｿﾙのある位置に貼り付け"
+    ID_EDIT_REPEAT          "直前に行った動作を繰り返す"
+    ID_EDIT_REPLACE         "指定した文字列の置換"
+    ID_EDIT_SELECT_ALL      "文書全体を選択"
+    ID_EDIT_UNDO            "直前に行った動作を戻す"
+    ID_EDIT_REDO            "以前に行った動作をﾘﾄﾞｩ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "ｳｨﾝﾄﾞｳのｻｲｽﾞを変更"
+    AFX_IDS_SCMOVE          "ｳｨﾝﾄﾞｳを移動"
+    AFX_IDS_SCMINIMIZE      "ｳｨﾝﾄﾞｳのｱｲｺﾝ化"
+    AFX_IDS_SCMAXIMIZE      "ｳｨﾝﾄﾞｳの最大表示"
+    AFX_IDS_SCNEXTWINDOW    "次の文書ｳｨﾝﾄﾞｳに切り替え"
+    AFX_IDS_SCPREVWINDOW    "前の文書ｳｨﾝﾄﾞｳに切り替え"
+    AFX_IDS_SCCLOSE         "作業中のｳｨﾝﾄﾞｳを閉じ文書保管を確認"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "ｳｨﾝﾄﾞｳを通常のｻｲｽﾞに戻す"
+    AFX_IDS_SCTASKLIST      "作業中のｱﾌﾟﾘｹｰｼｮﾝﾘｽﾄ"
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CUR_NORMAL          CURSOR  DISCARDABLE     "RES\\CUR_NOMA.CUR"
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\vpc.rc2"  // App Studio では編集できないリソース
+
+#include "afxres.rc"			// リソースの標準的な構成要素
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
